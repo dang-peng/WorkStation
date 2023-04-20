@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class NeuroNetwork {
+class NeuralNetwork {
 private:
 	int epochs;
 	double learning_rate;
 	double w1, w2, w3, w4, w5, w6;
 	double b1, b2, b3;
 public:
-	NeuroNetwork(int es, double lr);
+	NeuralNetwork(int es, double lr);
 	double forward(vector<double> data);
 	void training(vector<vector<double>> data, vector<double>label);
 	void predict(vector<vector<double>>test_data, vector <double>test_label);
@@ -16,11 +16,11 @@ public:
 	double deriv_sigmoid(double x);
 	double getMSEcost(double pred, double label);
 };
-NeuroNetwork::NeuroNetwork(int es, double lr) : epochs(es), learning_rate(lr) {
+NeuralNetwork::NeuralNetwork(int es, double lr) : epochs(es), learning_rate(lr) {
 	w1 = w2 = w3 = w4 = w5 = w6 = 0;
 	b1 = b2 = b3 = 0;
 }
-double NeuroNetwork::forward(vector<double> data) {
+double NeuralNetwork::forward(vector<double> data) {
 	double sum_h1 = w1 * data[0] + w2 * data[1] + b1;
 	double sum_h2 = w3 * data[0] + w4 * data[1] + b2;
 	double sum_y1 = w5 * sigmoid(sum_h1) + w6 * sigmoid(sum_h2) + b3;
@@ -28,15 +28,15 @@ double NeuroNetwork::forward(vector<double> data) {
 	return y1;
 }
 
-double NeuroNetwork::deriv_sigmoid(double x) {
+double NeuralNetwork::deriv_sigmoid(double x) {
 	double y = sigmoid(x);
 	return y * (1 - y);
 }
-double NeuroNetwork::sigmoid(double x) {
+double NeuralNetwork::sigmoid(double x) {
 	return 1 / (1 + exp(-x));
 }
 
-void NeuroNetwork::predict(vector<vector<double>>data, vector<double>label) {
+void NeuralNetwork::predict(vector<vector<double>>data, vector<double>label) {
 	double cnt = 0;
 	for (int i = 0; i < data.size(); i++) {
 		double pred = forward(data[i]);
@@ -47,10 +47,10 @@ void NeuroNetwork::predict(vector<vector<double>>data, vector<double>label) {
 	}
 	cout << "correct rate:" << cnt / data.size() << endl;
 }
-double NeuroNetwork::getMSEcost(double pred, double label) {
+double NeuralNetwork::getMSEcost(double pred, double label) {
 	return (pred - label) * (pred - label);
 }
-void NeuroNetwork::training(vector<vector<double>>data, vector<double>label) {
+void NeuralNetwork::training(vector<vector<double>>data, vector<double>label) {
 	for (int epoch = 0; epoch < epochs; ++epoch) {
 		for (int i = 0; i < data.size(); ++i) {
 			vector<double> x = data[i];
@@ -99,7 +99,7 @@ void NeuroNetwork::training(vector<vector<double>>data, vector<double>label) {
 }
 
 int main() {
-	NeuroNetwork NN = NeuroNetwork(1000, 0.1);
+	NeuralNetwork NN = NeuralNetwork(1000, 0.1);
 	vector<vector<double>>training_data = { {-2,-1},{25,6},{17,4},{-15,-6} };
 	vector<double>training_label = { 1,0,0,1 };
 	vector<vector<double>>test_data = { {-3,-4},{-5,-4},{12,3},{-13,-4},{9,12} };
