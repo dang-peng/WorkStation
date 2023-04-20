@@ -8,7 +8,10 @@ private:
 	double w1, w2, w3, w4, w5, w6;
 	double b1, b2, b3;
 public:
-	NeuralNetwork(int es, double lr);
+	NeuralNetwork(int es, double lr) : epochs(es), learning_rate(lr) {
+		w1 = w2 = w3 = w4 = w5 = w6 = 0;
+		b1 = b2 = b3 = 0;
+	}
 	double forward(vector<double> data);
 	void training(vector<vector<double>> data, vector<double>label);
 	void predict(vector<vector<double>>test_data, vector <double>test_label);
@@ -16,10 +19,6 @@ public:
 	double deriv_sigmoid(double x);
 	double getMSEcost(double pred, double label);
 };
-NeuralNetwork::NeuralNetwork(int es, double lr) : epochs(es), learning_rate(lr) {
-	w1 = w2 = w3 = w4 = w5 = w6 = 0;
-	b1 = b2 = b3 = 0;
-}
 double NeuralNetwork::forward(vector<double> data) {
 	double sum_h1 = w1 * data[0] + w2 * data[1] + b1;
 	double sum_h2 = w3 * data[0] + w4 * data[1] + b2;
