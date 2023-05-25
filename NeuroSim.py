@@ -4,13 +4,6 @@ import numpy as np
 from MNIST import (x_train, y_train, x_test, y_test)
 
 
-# class Network(object):
-#
-#     def __init__(self, sizes):
-#         self.num_layers = len(sizes)
-#         self.sizes = sizes
-
-
 class NeuralNetwork:
     def __init__(self, layer_sizes, lr):
         self.learning_rate = lr
@@ -18,11 +11,8 @@ class NeuralNetwork:
         self.activations = None
         self.layer_sizes = layer_sizes
         self.num_layers = len(layer_sizes)
-        # self.weights = [np.random.rand(layer_sizes[i - 1], layer_sizes[i]) for i in range(1, self.num_layers)]
         self.weights = [np.random.randn(layer_sizes[i], layer_sizes[i - 1]) for i in range(1, self.num_layers)]
         self.biases = [np.zeros((layer_sizes[i], 1)) for i in range(1, self.num_layers)]
-        # self.biases = [np.random.rand(y, 1) for y in layer_sizes[1:]]
-        # self.weights = [np.random.rand(y, x) for x, y in zip(layer_sizes[:-1], layer_sizes[1:])]
     
     # 激活函数
     @staticmethod
@@ -47,8 +37,8 @@ class NeuralNetwork:
     # 前向传播
     def forward(self, x):
         activation = x
-        self.activations = [x]  # list to store all the activations, layer by layer
-        self.layer_input = []  # list to store all the input vectors, layer by layer
+        self.activations = [x]
+        self.layer_input = []  # 存储除第一层之外的每一层输入
         for i in range(self.num_layers - 1):
             z = np.dot(self.weights[i], self.activations[i]) + self.biases[i]
             self.layer_input.append(z)
@@ -81,10 +71,8 @@ class NeuralNetwork:
         loss = np.sum(log_probs) / m  # 计算平均损失
         return loss * 10 ** 8
     
-    # 计算均方误差损失
+    # 计算均方误差损失函数
     def mean_squared_error(self, x, y):
-        # mse = np.mean((self.forward(x) - y) ** 2)
-        # return mse
         m = x.shape[0]  # 样本数量
         test_result = self.forward(x)[y, np.arange(m)]
         return np.sum([0.5 * (x - y) ** 2 for (x, y) in test_result])
@@ -122,7 +110,7 @@ class NeuralNetwork:
 learning_rate = 0.01
 num_epochs = 10
 # 创建神经网络模型
-input_size = 100  # input_size = 784
+input_size = 100
 hidden_sizes = 64  # 可根据需求设置隐藏层的大小和层数
 output_size = 10
 layer_sizes = [input_size] + [hidden_sizes] + [output_size]
