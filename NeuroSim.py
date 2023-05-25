@@ -4,6 +4,7 @@ import numpy as np
 from MNIST import (x_train, y_train, x_test, y_test)
 
 
+# 定义神经网络模型类
 class NeuralNetwork:
     def __init__(self, layer_sizes, lr):
         self.learning_rate = lr
@@ -19,11 +20,10 @@ class NeuralNetwork:
     def sigmoid(x):
         return 1 / (1 + np.exp(-x))
     
+    # Sigmoid的导数
     def sigmoid_derivative(self, z):
-        """Sigmoid的导数"""
         return self.sigmoid(z) * (1 - self.sigmoid(z))
     
-    # 定义神经网络模型类
     @staticmethod
     def loss_derivative(activations, y):
         # ∂L/∂y = y-Y
