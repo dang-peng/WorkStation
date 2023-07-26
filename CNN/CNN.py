@@ -101,7 +101,7 @@ class FullyConnectedLayer:
         return d_L_d_input.reshape(self.last_input_shape)
 
 
-class ConvNet:
+class ConvolutionalNeuralNetworks:
     def __init__(self):
         self.conv1 = ConvolutionalLayer(8, 3)
         self.pool1 = MaxPoolingLayer(2)
@@ -133,7 +133,7 @@ def main():
     batch_size = 100
     train_images, train_labels, test_images, test_labels, batches = GetDataset(batch_size).get_data()
     # 创建模型
-    model = ConvNet()
+    model = ConvolutionalNeuralNetworks()
     # 训练模型
     epochs = 5
     learn_rate = 0.01
