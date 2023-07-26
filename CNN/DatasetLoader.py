@@ -77,8 +77,8 @@ def datalist(X, Y, batch_size):
     return images, labels
 
 
-(Train_images, Train_Y) = load_mnist("f:/Code/practice/Learning/Python/dataset/", kind = 'train')
-(Test_images, Test_Y) = load_mnist("f:/Code/practice/Learning/Python/dataset/", kind = 't10k')
+(Train_images, Train_Y) = load_mnist("./dataset/", kind = 'train')
+(Test_images, Test_Y) = load_mnist("./dataset/", kind = 't10k')
 # 将标签转换为one-hot向量
 num_classes = 10
 Train_labels = np.eye(num_classes)[Train_Y]
