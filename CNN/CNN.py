@@ -107,21 +107,21 @@ class ConvolutionalNeuralNetworks:
         self.pool1 = MaxPoolingLayer(2)
         self.conv2 = ConvolutionalLayer(16, 3)
         self.pool2 = MaxPoolingLayer(2)
-        self.dense1 = FullyConnectedLayer(7 * 7 * 16, 32)
-        self.dense2 = FullyConnectedLayer(32, 10)
+        self.fc1 = FullyConnectedLayer(7 * 7 * 16, 32)
+        self.fc2 = FullyConnectedLayer(32, 10)
     
     def forward(self, input):
         output = self.conv1.forward(input)
         output = self.pool1.forward(output)
         output = self.conv2.forward(output)
         output = self.pool2.forward(output)
-        output = self.dense1.forward(output)
-        output = self.dense2.forward(output)
+        output = self.fc1.forward(output)
+        output = self.fc2.forward(output)
         return output
     
     def backward(self, d_L_d_out, learn_rate):
-        d_L_d_out = self.dense2.backward(d_L_d_out, learn_rate)
-        d_L_d_out = self.dense1.backward(d_L_d_out, learn_rate)
+        d_L_d_out = self.fc2.backward(d_L_d_out, learn_rate)
+        d_L_d_out = self.fc1.backward(d_L_d_out, learn_rate)
         d_L_d_out = self.pool2.backward(d_L_d_out)
         d_L_d_out = self.conv2.backward(d_L_d_out, learn_rate)
         d_L_d_out = self.pool1.backward(d_L_d_out)
