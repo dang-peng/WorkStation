@@ -1,0 +1,1164 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Dec  7 15:58:06 2023
+
+# Variables
+
+# makefile (from 'makefile', line 45)
+OBJ := Array.o Cell.o IO.o Mapping.o NeuroSim.o Param.o Test.o Train.o formula.o NeuroSim/Adder.o NeuroSim/CurrentSenseAmp.o NeuroSim/DFF.o NeuroSim/DecoderDriver.o NeuroSim/FunctionUnit.o NeuroSim/MultilevelSAEncoder.o NeuroSim/MultilevelSenseAmp.o NeuroSim/Mux.o NeuroSim/NewSwitchMatrix.o NeuroSim/Precharger.o NeuroSim/ReadCircuit.o NeuroSim/RowDecoder.o NeuroSim/SRAMWriteDriver.o NeuroSim/SenseAmp.o NeuroSim/ShiftAdd.o NeuroSim/SubArray.o NeuroSim/Subtractor.o NeuroSim/SwitchMatrix.o NeuroSim/Technology.o NeuroSim/VoltageSenseAmp.o NeuroSim/WLDecoderOutput.o NeuroSim/WLNewDecoderDriver.o NeuroSim/formula.o
+ 
+# environment
+LC_ALL = C
+# makefile (from 'makefile', line 43)
+SRC := Array.cpp Cell.cpp IO.cpp Mapping.cpp NeuroSim.cpp Param.cpp Test.cpp Train.cpp formula.cpp NeuroSim/Adder.cpp NeuroSim/CurrentSenseAmp.cpp NeuroSim/DFF.cpp NeuroSim/DecoderDriver.cpp NeuroSim/FunctionUnit.cpp NeuroSim/MultilevelSAEncoder.cpp NeuroSim/MultilevelSenseAmp.cpp NeuroSim/Mux.cpp NeuroSim/NewSwitchMatrix.cpp NeuroSim/Precharger.cpp NeuroSim/ReadCircuit.cpp NeuroSim/RowDecoder.cpp NeuroSim/SRAMWriteDriver.cpp NeuroSim/SenseAmp.cpp NeuroSim/ShiftAdd.cpp NeuroSim/SubArray.cpp NeuroSim/Subtractor.cpp NeuroSim/SwitchMatrix.cpp NeuroSim/Technology.cpp NeuroSim/VoltageSenseAmp.cpp NeuroSim/WLDecoderOutput.cpp NeuroSim/WLNewDecoderDriver.cpp NeuroSim/formula.cpp
+# environment
+PULSE_SERVER = unix:/mnt/wslg/PulseServer
+# environment
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
+# environment
+VSCODE_CWD = /mnt/d/Software/Microsoft VS Code
+# default
+MAKE_COMMAND := make
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/dangpeng/NeuroSim/MLP_NeuroSim_V3.0-master
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# makefile (from 'makefile', line 41)
+MAINS := main.cpp
+# environment
+LANG = C
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/dangpeng/NeuroSim/MLP_NeuroSim_V3.0-master
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = vscode-local:/c%3A/Users/Sunny/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.84.2023111509/translations/extensions/vscode.json-language-features.i18n.json
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+WSL2_GUI_APPS_ENABLED = 1
+# environment
+WAYLAND_DISPLAY = wayland-0
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from '.depend', line 1)
+MAKEFILE_LIST := makefile .depend
+# automatic
+@F = $(notdir $@)
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+*F = $(notdir $*)
+# makefile (from 'makefile', line 42)
+ALLSRC := Array.cpp Cell.cpp IO.cpp Mapping.cpp NeuroSim.cpp Param.cpp Test.cpp Train.cpp formula.cpp main.cpp NeuroSim/Adder.cpp NeuroSim/CurrentSenseAmp.cpp NeuroSim/DFF.cpp NeuroSim/DecoderDriver.cpp NeuroSim/FunctionUnit.cpp NeuroSim/MultilevelSAEncoder.cpp NeuroSim/MultilevelSenseAmp.cpp NeuroSim/Mux.cpp NeuroSim/NewSwitchMatrix.cpp NeuroSim/Precharger.cpp NeuroSim/ReadCircuit.cpp NeuroSim/RowDecoder.cpp NeuroSim/SRAMWriteDriver.cpp NeuroSim/SenseAmp.cpp NeuroSim/ShiftAdd.cpp NeuroSim/SubArray.cpp NeuroSim/Subtractor.cpp NeuroSim/SwitchMatrix.cpp NeuroSim/Technology.cpp NeuroSim/VoltageSenseAmp.cpp NeuroSim/WLDecoderOutput.cpp NeuroSim/WLNewDecoderDriver.cpp NeuroSim/formula.cpp
+# environment
+MANPATH = /usr/local/texlive/2020/texmf-dist/doc/man:
+# makefile (from 'makefile', line 44)
+ALLOBJ := Array.o Cell.o IO.o Mapping.o NeuroSim.o Param.o Test.o Train.o formula.o main.o NeuroSim/Adder.o NeuroSim/CurrentSenseAmp.o NeuroSim/DFF.o NeuroSim/DecoderDriver.o NeuroSim/FunctionUnit.o NeuroSim/MultilevelSAEncoder.o NeuroSim/MultilevelSenseAmp.o NeuroSim/Mux.o NeuroSim/NewSwitchMatrix.o NeuroSim/Precharger.o NeuroSim/ReadCircuit.o NeuroSim/RowDecoder.o NeuroSim/SRAMWriteDriver.o NeuroSim/SenseAmp.o NeuroSim/ShiftAdd.o NeuroSim/SubArray.o NeuroSim/Subtractor.o NeuroSim/SwitchMatrix.o NeuroSim/Technology.o NeuroSim/VoltageSenseAmp.o NeuroSim/WLDecoderOutput.o NeuroSim/WLNewDecoderDriver.o NeuroSim/formula.o
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","osLocale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"7b3b4bbe44b5870ce6cf5ac70d2b1a12.zh-cn","_translationsConfigFile":"/home/dangpeng/.vscode-server/data/clp/7b3b4bbe44b5870ce6cf5ac70d2b1a12.zh-cn/tcf.json","_cacheRoot":"/home/dangpeng/.vscode-server/data/clp/7b3b4bbe44b5870ce6cf5ac70d2b1a12.zh-cn","_resolvedLanguagePackCoreLocation":"/home/dangpeng/.vscode-server/data/clp/7b3b4bbe44b5870ce6cf5ac70d2b1a12.zh-cn/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e","_corruptedFile":"/home/dangpeng/.vscode-server/data/clp/7b3b4bbe44b5870ce6cf5ac70d2b1a12.zh-cn/corrupted.info","_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+INFOPATH = /usr/local/texlive/2020/texmf-dist/doc/info:
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/dangpeng/.vscode-server/bin/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/bin/remote-cli:/usr/local/texlive/2020/bin/x86_64-linux:/home/dangpeng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/Software/VMware/bin/:/mnt/d/Software/CUDA/CUDA_2/bin:/mnt/d/Software/CUDA/CUDA_2/libnvvp:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/d/Software/MATLAB2022a/runtime/win64:/mnt/d/Software/MATLAB2022a/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2022.3.0/:/mnt/c/Program Files/Git/cmd:/mnt/d/Software/LaTex/texlive/2022/bin/win32:/mnt/d/Software/TexLive/texlive/2023/bin/windows:/mnt/c/Users/Sunny/AppData/Local/Microsoft/WindowsApps:/mnt/d/Software/Microsoft VS Code/bin:/mnt/c/Users/Sunny/AppData/Local/GitHubDesktop/bin:/mnt/d/Software/LaTex/texlive/2022/bin/win32:/mnt/c/Users/Sunny/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Python 3.10:/mnt/d/Software/Anaconda/Scripts:/mnt/d/Software/Anaconda/Library/bin:/mnt/d/Software/Anaconda:/snap/bin
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# makefile (from 'makefile', line 68)
+NOW := 20231207_155806
+# automatic
+?F = $(notdir $?)
+# environment
+NAME = Sunny
+# environment
+HOSTTYPE = x86_64
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
++F = $(notdir $+)
+# environment
+WSL_INTEROP = /run/WSL/12_interop
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = dangpeng
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Sunny/.vscode/extensions/ms-vscode-remote.remote-wsl-0.81.8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+DISPLAY = :0
+# environment
+USER = dangpeng
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+_ = /home/dangpeng/.vscode-server/bin/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e/node
+# environment
+XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
+# environment
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-f6f1acc3-1975-4cf0-8edd-796f3d0f04fc.sock
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/dangpeng
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TERM = xterm-256color
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# makefile (from 'makefile', line 48)
+CXXFLAGS := -fopenmp -O3 -std=c++0x -w
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'makefile', line 47)
+CXX := g++
+# variable set hash-table stats:
+# Load=80/1024=8%, Rehash=0, Collisions=4/128=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2080, inode 3037): 46 files, no impossibilities.
+# NeuroSim (device 2080, inode 31833): 75 files, no impossibilities.
+
+# 121 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+%.o: %.cpp
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+NeuroSim/DecoderDriver.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Param.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/ShiftAdd.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/RowDecoder.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SRAMWriteDriver.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/MultilevelSAEncoder.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/DFF.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+depend: .depend
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+NeuroSim/CurrentSenseAmp.o: NeuroSim/CurrentSenseAmp.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'NeuroSim/CurrentSenseAmp'
+#  Last modified 2023-11-20 15:16:13.293006036
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := NeuroSim/CurrentSenseAmp.o
+# automatic
+# * := NeuroSim/CurrentSenseAmp
+# automatic
+# < := NeuroSim/CurrentSenseAmp.cpp
+# automatic
+# + := NeuroSim/CurrentSenseAmp.cpp
+# automatic
+# % := 
+# automatic
+# ^ := NeuroSim/CurrentSenseAmp.cpp
+# automatic
+# ? := NeuroSim/CurrentSenseAmp.cpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+Train.o: Train.cpp Train.cpp formula.h Param.h Array.h Cell.h Mapping.h NeuroSim.h NeuroSim/InputParameter.h NeuroSim/typedef.h NeuroSim/MemCell.h NeuroSim/Technology.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/Technology.h NeuroSim/MemCell.h NeuroSim/formula.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/constant.h NeuroSim/NewSwitchMatrix.h NeuroSim/Adder.h NeuroSim/Mux.h NeuroSim/RowDecoder.h NeuroSim/DFF.h NeuroSim/Subtractor.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Train'
+#  Last modified 2023-11-20 15:21:16.94296917
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+ 
+WLNewDecoderDriver.o: NeuroSim/WLNewDecoderDriver.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/WLNewDecoderDriver.h NeuroSim/FunctionUnit.h NeuroSim/InputParameter.h NeuroSim/MemCell.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/SwitchMatrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+NeuroSim.o: NeuroSim.cpp NeuroSim.cpp NeuroSim.h NeuroSim/InputParameter.h NeuroSim/typedef.h NeuroSim/MemCell.h NeuroSim/Technology.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/Technology.h NeuroSim/MemCell.h NeuroSim/formula.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/constant.h NeuroSim/NewSwitchMatrix.h Array.h Cell.h NeuroSim/Adder.h NeuroSim/Mux.h NeuroSim/RowDecoder.h NeuroSim/DFF.h NeuroSim/Subtractor.h NeuroSim/constant.h NeuroSim/formula.h Param.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'NeuroSim'
+#  Last modified 2023-11-20 15:21:16.112969278
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+NeuroSim/Subtractor.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SenseAmp.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Technology.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Precharger.o: NeuroSim/Precharger.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/Precharger.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/VoltageSenseAmp.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Technology.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/ReadCircuit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/MultilevelSAEncoder.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/ShiftAdd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Train.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Cell.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SubArray.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/FunctionUnit.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/MemCell.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+Param.o: Param.cpp Param.cpp Param.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Param'
+#  Last modified 2023-11-20 15:21:16.182969268
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+formula.o: formula.cpp formula.cpp NeuroSim/formula.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/../Param.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'formula'
+#  Last modified 2023-11-20 15:21:17.002969163
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+Mux.o: NeuroSim/Mux.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/Mux.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Array.o: Array.cpp Array.cpp formula.h Array.h Cell.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Array'
+#  Last modified 2023-11-20 15:21:15.212969393
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+NeuroSim/SubArray.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SwitchMatrix.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+ReadCircuit.o: NeuroSim/ReadCircuit.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/ReadCircuit.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Mapping.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Precharger.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+IO.o: IO.cpp IO.cpp formula.h Param.h Cell.h Array.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'IO'
+#  Last modified 2023-11-20 15:21:15.712969329
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+NeuroSim/MultilevelSenseAmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+DFF.o: NeuroSim/DFF.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/DFF.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/../Param.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+SenseAmp.o: NeuroSim/SenseAmp.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/SenseAmp.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/RowDecoder.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/VoltageSenseAmp.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/WLDecoderOutput.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 64):
+	$(RM) $(MAINS:.cpp=)
+	$(RM) $(ALLOBJ)
+
+# Not a target:
+NeuroSim/ReadCircuit.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/NewSwitchMatrix.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+VoltageSenseAmp.o: NeuroSim/VoltageSenseAmp.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/VoltageSenseAmp.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+SubArray.o: NeuroSim/SubArray.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/NewSwitchMatrix.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/NewSwitchMatrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/WLDecoderOutput.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+CurrentSenseAmp.o: NeuroSim/CurrentSenseAmp.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/CurrentSenseAmp.h NeuroSim/FunctionUnit.h NeuroSim/InputParameter.h NeuroSim/MemCell.h
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Array.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/formula.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+Subtractor.o: NeuroSim/Subtractor.cpp NeuroSim/constant.h NeuroSim/typedef.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/Subtractor.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/MultilevelSenseAmp.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+SwitchMatrix.o: NeuroSim/SwitchMatrix.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/SwitchMatrix.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h NeuroSim/DFF.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Cell.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SenseAmp.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Mux.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/WLNewDecoderDriver.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/DFF.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Train.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+IO.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/CurrentSenseAmp.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/NewSwitchMatrix.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+all: main
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+SRAMWriteDriver.o: NeuroSim/SRAMWriteDriver.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/SRAMWriteDriver.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 70):
+	stdbuf -o 0 ./$(MAINS:.cpp=) | tee log_$(NOW).txt
+
+# Not a target:
+NeuroSim/Adder.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Precharger.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/WLNewDecoderDriver.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SRAMWriteDriver.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Test.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Param.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+formula.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+.depend: Array.cpp Cell.cpp IO.cpp Mapping.cpp NeuroSim.cpp Param.cpp Test.cpp Train.cpp formula.cpp main.cpp NeuroSim/Adder.cpp NeuroSim/CurrentSenseAmp.cpp NeuroSim/DFF.cpp NeuroSim/DecoderDriver.cpp NeuroSim/FunctionUnit.cpp NeuroSim/MultilevelSAEncoder.cpp NeuroSim/MultilevelSenseAmp.cpp NeuroSim/Mux.cpp NeuroSim/NewSwitchMatrix.cpp NeuroSim/Precharger.cpp NeuroSim/ReadCircuit.cpp NeuroSim/RowDecoder.cpp NeuroSim/SRAMWriteDriver.cpp NeuroSim/SenseAmp.cpp NeuroSim/ShiftAdd.cpp NeuroSim/SubArray.cpp NeuroSim/Subtractor.cpp NeuroSim/SwitchMatrix.cpp NeuroSim/Technology.cpp NeuroSim/VoltageSenseAmp.cpp NeuroSim/WLDecoderOutput.cpp NeuroSim/WLNewDecoderDriver.cpp NeuroSim/formula.cpp
+#  Implicit rule search has not been done.
+#  Last modified 2023-12-07 15:58:06.826550241
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 59):
+	@$(RM) .depend
+	@g++ -MM $(CXXFLAGS) $^ > .depend;
+
+Technology.o: NeuroSim/Technology.cpp NeuroSim/Technology.h NeuroSim/typedef.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2023-11-20 20:03:14.09096849
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/InputParameter.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/DecoderDriver.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/DecoderDriver.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+WLDecoderOutput.o: NeuroSim/WLDecoderOutput.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/WLDecoderOutput.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/SRAMWriteDriver.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/MultilevelSAEncoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: Array.o Cell.o IO.o Mapping.o NeuroSim.o Param.o Test.o Train.o formula.o NeuroSim/Adder.o NeuroSim/CurrentSenseAmp.o NeuroSim/DFF.o NeuroSim/DecoderDriver.o NeuroSim/FunctionUnit.o NeuroSim/MultilevelSAEncoder.o NeuroSim/MultilevelSenseAmp.o NeuroSim/Mux.o NeuroSim/NewSwitchMatrix.o NeuroSim/Precharger.o NeuroSim/ReadCircuit.o NeuroSim/RowDecoder.o NeuroSim/SRAMWriteDriver.o NeuroSim/SenseAmp.o NeuroSim/ShiftAdd.o NeuroSim/SubArray.o NeuroSim/Subtractor.o NeuroSim/SwitchMatrix.o NeuroSim/Technology.o NeuroSim/VoltageSenseAmp.o NeuroSim/WLDecoderOutput.o NeuroSim/WLNewDecoderDriver.o NeuroSim/formula.o main.o
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Last modified 2023-11-20 20:03:17.840968054
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'makefile', line 53):
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
+Cell.o: Cell.cpp Cell.cpp formula.h Array.h Cell.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Cell'
+#  Last modified 2023-11-20 15:21:15.56296935
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+NeuroSim/RowDecoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+FunctionUnit.o: NeuroSim/FunctionUnit.cpp NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Mux.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/ShiftAdd.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/FunctionUnit.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Array.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/ReadCircuit.h:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+main.o: main.cpp Cell.h Array.h formula.h NeuroSim.h NeuroSim/InputParameter.h NeuroSim/typedef.h NeuroSim/MemCell.h NeuroSim/Technology.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/Technology.h NeuroSim/MemCell.h NeuroSim/formula.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/constant.h NeuroSim/NewSwitchMatrix.h NeuroSim/Adder.h NeuroSim/Mux.h NeuroSim/RowDecoder.h NeuroSim/DFF.h NeuroSim/Subtractor.h Param.h IO.h Train.h Test.h Mapping.h Definition.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/SubArray.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+NeuroSim/Adder.o: NeuroSim/Adder.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'NeuroSim/Adder'
+#  Last modified 2023-11-20 15:16:13.173006054
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+IO.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+RowDecoder.o: NeuroSim/RowDecoder.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/RowDecoder.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+MultilevelSAEncoder.o: NeuroSim/MultilevelSAEncoder.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/MultilevelSAEncoder.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Adder.o: NeuroSim/Adder.cpp NeuroSim/constant.h NeuroSim/typedef.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/Adder.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2023-11-20 19:01:03.761407496
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/WLNewDecoderDriver.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/SenseAmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/FunctionUnit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/VoltageSenseAmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+DecoderDriver.o: NeuroSim/DecoderDriver.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/DecoderDriver.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.SECONDEXPANSION:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Subtractor.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Mapping.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+NewSwitchMatrix.o: NeuroSim/NewSwitchMatrix.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/NewSwitchMatrix.h NeuroSim/FunctionUnit.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/DFF.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/SwitchMatrix.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/formula.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Definition.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Technology.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Test.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/DFF.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Mapping.o: Mapping.cpp Mapping.cpp Param.h Array.h Cell.h NeuroSim.h NeuroSim/InputParameter.h NeuroSim/typedef.h NeuroSim/MemCell.h NeuroSim/Technology.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/Technology.h NeuroSim/MemCell.h NeuroSim/formula.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/constant.h NeuroSim/NewSwitchMatrix.h NeuroSim/Adder.h NeuroSim/Mux.h NeuroSim/RowDecoder.h NeuroSim/DFF.h NeuroSim/Subtractor.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Mapping'
+#  Last modified 2023-11-20 15:21:15.832969315
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+# Not a target:
+NeuroSim/MultilevelSenseAmp.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: all clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+Test.o: Test.cpp Test.cpp formula.h Param.h Array.h Cell.h Mapping.h NeuroSim.h NeuroSim/InputParameter.h NeuroSim/typedef.h NeuroSim/MemCell.h NeuroSim/Technology.h NeuroSim/SubArray.h NeuroSim/InputParameter.h NeuroSim/Technology.h NeuroSim/MemCell.h NeuroSim/formula.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/RowDecoder.h NeuroSim/Mux.h NeuroSim/WLDecoderOutput.h NeuroSim/DFF.h NeuroSim/VoltageSenseAmp.h NeuroSim/Precharger.h NeuroSim/SenseAmp.h NeuroSim/DecoderDriver.h NeuroSim/SRAMWriteDriver.h NeuroSim/ReadCircuit.h NeuroSim/SwitchMatrix.h NeuroSim/ShiftAdd.h NeuroSim/Subtractor.h NeuroSim/MultilevelSenseAmp.h NeuroSim/CurrentSenseAmp.h NeuroSim/MultilevelSAEncoder.h NeuroSim/WLNewDecoderDriver.h NeuroSim/constant.h NeuroSim/NewSwitchMatrix.h NeuroSim/Adder.h NeuroSim/Mux.h NeuroSim/RowDecoder.h NeuroSim/DFF.h NeuroSim/Subtractor.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Test'
+#  Last modified 2023-11-20 15:21:16.432969237
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
+MultilevelSenseAmp.o: NeuroSim/MultilevelSenseAmp.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/MultilevelSenseAmp.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h NeuroSim/CurrentSenseAmp.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+formula.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/constant.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+ShiftAdd.o: NeuroSim/ShiftAdd.cpp NeuroSim/constant.h NeuroSim/formula.h NeuroSim/Technology.h NeuroSim/typedef.h NeuroSim/ShiftAdd.h NeuroSim/InputParameter.h NeuroSim/MemCell.h NeuroSim/FunctionUnit.h NeuroSim/Adder.h NeuroSim/DFF.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Subtractor.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/Mux.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Precharger.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/typedef.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/CurrentSenseAmp.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2023-11-24 12:04:50.151703053
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+ 
+NeuroSim/WLDecoderOutput.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+NeuroSim/Adder.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+NeuroSim/formula.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-03 09:51:55
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=137/1024=13%, Rehash=0, Collisions=47/692=7%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 212 / storage = 3457 B / avg = 16 B
+# current buf: size = 8162 B / used = 3457 B / count = 212 / avg = 16 B
+
+# strcache performance: lookups = 764 / hit rate = 72%
+# hash-table stats:
+# Load=212/8192=3%, Rehash=0, Collisions=5/764=1%
+# Finished Make data base on Thu Dec  7 15:58:06 2023
+
+ 

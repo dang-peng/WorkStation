@@ -1,0 +1,40 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/dangpeng/NeuroSim/MLP_NeuroSim_V3.0-master'
+ 
+g++ -c -fopenmp -O3 -std=c++0x -w Array.cpp -o Array.o
+g++ -c -fopenmp -O3 -std=c++0x -w Cell.cpp -o Cell.o
+g++ -c -fopenmp -O3 -std=c++0x -w IO.cpp -o IO.o
+ 
+g++ -c -fopenmp -O3 -std=c++0x -w Mapping.cpp -o Mapping.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim.cpp -o NeuroSim.o
+g++ -c -fopenmp -O3 -std=c++0x -w Param.cpp -o Param.o
+g++ -c -fopenmp -O3 -std=c++0x -w Test.cpp -o Test.o
+g++ -c -fopenmp -O3 -std=c++0x -w Train.cpp -o Train.o
+g++ -c -fopenmp -O3 -std=c++0x -w formula.cpp -o formula.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/Adder.cpp -o NeuroSim/Adder.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/CurrentSenseAmp.cpp -o NeuroSim/CurrentSenseAmp.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/DFF.cpp -o NeuroSim/DFF.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/DecoderDriver.cpp -o NeuroSim/DecoderDriver.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/FunctionUnit.cpp -o NeuroSim/FunctionUnit.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/MultilevelSAEncoder.cpp -o NeuroSim/MultilevelSAEncoder.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/MultilevelSenseAmp.cpp -o NeuroSim/MultilevelSenseAmp.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/Mux.cpp -o NeuroSim/Mux.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/NewSwitchMatrix.cpp -o NeuroSim/NewSwitchMatrix.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/Precharger.cpp -o NeuroSim/Precharger.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/ReadCircuit.cpp -o NeuroSim/ReadCircuit.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/RowDecoder.cpp -o NeuroSim/RowDecoder.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/SRAMWriteDriver.cpp -o NeuroSim/SRAMWriteDriver.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/SenseAmp.cpp -o NeuroSim/SenseAmp.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/ShiftAdd.cpp -o NeuroSim/ShiftAdd.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/SubArray.cpp -o NeuroSim/SubArray.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/Subtractor.cpp -o NeuroSim/Subtractor.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/SwitchMatrix.cpp -o NeuroSim/SwitchMatrix.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/Technology.cpp -o NeuroSim/Technology.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/VoltageSenseAmp.cpp -o NeuroSim/VoltageSenseAmp.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/WLDecoderOutput.cpp -o NeuroSim/WLDecoderOutput.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/WLNewDecoderDriver.cpp -o NeuroSim/WLNewDecoderDriver.o
+g++ -c -fopenmp -O3 -std=c++0x -w NeuroSim/formula.cpp -o NeuroSim/formula.o
+g++ -c -fopenmp -O3 -std=c++0x -w main.cpp -o main.o
+g++ -fopenmp -O3 -std=c++0x -w Array.o Cell.o IO.o Mapping.o NeuroSim.o Param.o Test.o Train.o formula.o NeuroSim/Adder.o NeuroSim/CurrentSenseAmp.o NeuroSim/DFF.o NeuroSim/DecoderDriver.o NeuroSim/FunctionUnit.o NeuroSim/MultilevelSAEncoder.o NeuroSim/MultilevelSenseAmp.o NeuroSim/Mux.o NeuroSim/NewSwitchMatrix.o NeuroSim/Precharger.o NeuroSim/ReadCircuit.o NeuroSim/RowDecoder.o NeuroSim/SRAMWriteDriver.o NeuroSim/SenseAmp.o NeuroSim/ShiftAdd.o NeuroSim/SubArray.o NeuroSim/Subtractor.o NeuroSim/SwitchMatrix.o NeuroSim/Technology.o NeuroSim/VoltageSenseAmp.o NeuroSim/WLDecoderOutput.o NeuroSim/WLNewDecoderDriver.o NeuroSim/formula.o main.o -o main
+make: Leaving directory '/home/dangpeng/NeuroSim/MLP_NeuroSim_V3.0-master'
+ 
