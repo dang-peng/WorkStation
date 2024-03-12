@@ -7,8 +7,6 @@ import time
 
 import torch
 import torch.nn as nn
-import torch.optim as optim
-from torch.optim.lr_scheduler import StepLR
 
 from DatasetLoader import train_loader, test_loader
 
@@ -157,67 +155,73 @@ class ConvolutionalNeuralNetwork(nn.Module):
         return x
     
     def Train(self, device):
+        # optimizer = optim.SGD(self.parameters(), lr = 0.01, momentum = 0.9)
+        # optimizer = optim.Adam(self.parameters(), lr = 0.0001)
+        # scheduler = StepLR(optimizer, step_size = 30, gamma = 0.5)
         num_epochs = 301
         loss_func = nn.CrossEntropyLoss()
-        optimizer = optim.SGD(self.parameters(), lr = 0.01, momentum = 0.9)
-        scheduler = StepLR(optimizer, step_size = 30, gamma = 0.5)
-        # optimizer = optim.Adam(self.parameters(), lr = 0.0001)
-        Loss = []
-        Test_Accuracy = []
+        initial_lr = 0.01
+        lr = initial_lr
+        step_size = 30
+        gamma = 0.5
+        # 初始化动量状态
+        momentum_state = {}
+        for name, param in self.named_parameters():
+            if param.requires_grad:
+                momentum_state[name] = torch.zeros_like(param.data)
+        momentum = 0.9  # 动量因子
         # 累积权重变化和阈值
         accumulated_delta_w = {name: torch.zeros_like(param) for name, param in self.named_parameters()}
         # 设置更新阈值
         threshold = 0
+        Loss = []
+        Test_Accuracy = []
         for epoch in range(num_epochs):
             timestart = time.time()
             epoch_loss = 0.0
             total_test = 0
             correct_test = 0
+            # 检查是否需要调整学习率
+            if (epoch + 1) % step_size == 0:
+                lr *= gamma  # 更新学习率
             for i, train_data in enumerate(train_loader, 0):
                 train_images, train_labels = train_data
                 train_images, train_labels = train_images.to(device), train_labels.to(device)
-                # zero the parameter gradients
-                optimizer.zero_grad()
-                # forward propagation
+                self.zero_grad()
                 y_hat = self(train_images)
-                # calculate loss
                 loss = loss_func(y_hat, train_labels)
-                # backpropagation
                 loss.backward()
-                # update model parameter
-                # optimizer.step()
-                # 计算预期的权重变化但不直接应用
+                # 手动更新权重，加入动量优化
                 with torch.no_grad():
                     for name, param in self.named_parameters():
-                        # 检查参数是否属于Conv2d或Linear层
-                        if isinstance(self.get_submodule(name.split('.')[0]), (nn.Conv2d, nn.Linear)):
-                            delta_weights = -optimizer.param_groups[0]['lr'] * param.grad
-                            accumulated_delta_w[name] += delta_weights
-                            # 检查累积权重变化是否达到阈值
-                            with torch.no_grad():
-                                # 创建一个掩码，表示哪些权重变化的绝对值超过了阈值
+                        if param.requires_grad:
+                            # 计算动量更新
+                            momentum_state[name] = momentum * momentum_state[name] + param.grad.data
+                            # 更新参数
+                            delta_weights = - lr * momentum_state[name]
+                            # 判断层类型是否属于Conv2d或Linear层
+                            submodule = self.get_submodule(name.split('.')[0])
+                            if isinstance(submodule, (nn.Conv2d, nn.Linear)):
+                                accumulated_delta_w[name] += delta_weights
+                                # 检查累积权重变化是否达到阈值
                                 mask = torch.abs(accumulated_delta_w[name]) > threshold
                                 # 只更新超过阈值的权重变化，其他保持不变
-                                if mask.any():  # 如果有任何权重变化超过阈值
-                                    weight_before_update = param.clone()
+                                if mask.any():
+                                    weight_before_update = param.data.clone()
                                     update_weights = accumulated_delta_w[name] * mask.float()
-                                    param += update_weights
-                                    weight_after_update = param.clone()
+                                    param.data += update_weights
+                                    weight_after_update = param.data.clone()
                                     not_updated = (weight_before_update == weight_after_update).all()
                                     if not not_updated:
                                         # 直接使用Tensor操作来计算更新的数量
                                         self.updates_num += mask.sum().item()
                                     # 重置已更新权重的累积变化
                                     accumulated_delta_w[name] *= ~mask  # 使用逻辑非操作(~)将超过阈值的位置重置为0
-                                    # param.grad.zero_()
-                        else:
-                            # 对其他层参数进行实时更新
-                            if param.grad is not None:
-                                param.grad.zero_()
+                            elif not isinstance(submodule, (nn.BatchNorm2d, nn.Dropout)):
+                                # 对其他层（排除BatchNorm和Dropout）应用即时更新策略
+                                param.data += delta_weights
                 epoch_loss += loss.item()
-                # optimizer.step()
             Loss.append(epoch_loss / len(train_loader))
-            scheduler.step()
             for test_data in test_loader:
                 test_images, test_labels = test_data
                 test_images, test_labels = test_images.to(device), test_labels.to(device)
@@ -230,23 +234,26 @@ class ConvolutionalNeuralNetwork(nn.Module):
                                                                                                  time.time() - timestart,
                                                                                                  Loss[epoch],
                                                                                                  100.0 * correct_test / total_test))
-            # print('epoch %d cost %3f sec' % (epoch, time.time() - timestart))
-            # 动态创建文件名以包含epoch信息
             folder_path = "./TrainCumulativeThreshold"
             os.makedirs(folder_path, exist_ok = True)
-            filename = f"CNN_model_data_epoch_{epoch}.tar"
-            file_path = os.path.join(folder_path, filename)
-            torch.save({'epoch': epoch,
-                        'model_state_dict': self.state_dict(),
-                        'optimizer_state_dict': optimizer.state_dict(),
-                        'loss': epoch_loss / len(train_loader)
-                        }, file_path)
+            # 只在第300个epoch时保存
+            if epoch == 300:
+                filename = f"CNN_model_data_epoch_{epoch}.tar"
+                file_path = os.path.join(folder_path, filename)
+                torch.save({
+                    'epoch': epoch,
+                    'model_state_dict': self.state_dict(),
+                    # 'optimizer_state_dict': optimizer.state_dict(),
+                    'learning_rate': lr,  # 保存当前学习率
+                    'momentum_state': momentum_state,  # 保存动量状态
+                    'loss': epoch_loss / len(train_loader)
+                }, file_path)
         current_time = datetime.datetime.now().strftime("%m_%d_%H_%M")
         with open(f'./TrainCumulativeThreshold/CNN_train_data_{current_time}.pickle', 'wb') as file:
             pickle.dump((self.updates_num, Loss, Test_Accuracy), file)
     
     def Test(self, device):
-        file_path = './TrainCumulativeThreshold/CNN_model_data_epoch_199.tar'
+        file_path = './TrainCumulativeThreshold/CNN_model_data_epoch_300.tar'
         checkpoint = torch.load(file_path)
         self.load_state_dict(checkpoint['model_state_dict'])
         correct = 0
